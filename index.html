@@ -1,0 +1,91 @@
+<!-- USER FEEDBACK -->
+<!-- Make it so enter will trigger results (DONE) -->
+<!-- Add super/duper rectangles (DONE) -->
+<!-- Add cubes!!! Come on! (DONE)-->
+<!-- Display numbers for squares (DONE) -->
+<!-- Show powers of 2? Have it be a badge? (DONE) -->
+<!-- Show odds/evens? Have it be a badge? (DONE) -->
+<!-- Add a numberpad for touch controls (????) -->
+<!-- Bigger fonts (DONE)-->
+<!-- Fork a copy for major changes -->
+<!-- Add description on hover for each badge -->
+<!-- Show heroes with zeroes? Have it be a badge? -->
+<!-- Scale super / super duper rects for larger numbers -->
+<!-- Show patch notes on the page with dates (DONE) -->
+<!-- Give an email to report bugs / give feedback -->
+<!-- Make updates a scrollable dialog?? -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Fun Factors</title>
+  <link href="styles/style.css" rel="stylesheet" type="text/css" />
+  <!--
+    <script type="module" src="factors-util.js"></script>
+  -->
+  <script src="scripts/script.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <h1>What does my number do?!</h1>
+    <div id="factor-form">
+      <label for="number">Enter a number:</label>
+      <br>
+      <input type="number" id="number-input" name="number" required minlength="1" size="5">
+      <br>
+      <button type="button" id="factor-button">Factor it!</button>
+    </div>
+
+    <div id="results">
+      <div id="number-output">
+        <!-- populates on click -->
+      </div>
+
+      <div id="badges-output">
+        <!-- badges populate on click -->
+      </div>
+
+      <div id="factors-output">
+        <h2>Factors</h2>
+        <h3>Total:&nbsp<span id="factor-total"></span></h3>
+        <textarea id="factor-list" readonly></textarea>
+      </div>
+    </div>
+
+    <div class="updates-display">
+      <button id="updates-button" type="button">Updates</button>
+    </div>
+  
+    <div id="updates-container">
+      <!-- TODO: This should probably change from a dialog to something that is
+            compatible with all browsers (Safari, Firefox, etc.) -->
+        <dialog id="updates-dialog">
+          <div>
+            <button id="close-updates-dialog" type="button">X</button>
+  
+            <p class="date">Feb 24, 2023</p>
+            <p>
+              <ul>
+                <li>Changed styling on the number entry.</li>
+                <li>Fixed bug with detecting primes and super/super duper rectangles.</li>
+                <li>Added this updates view!</li>
+              </ul>
+            </p>
+          </div>
+        </dialog>
+    </div>
+    
+    <!--
+    This script places a badge on your repl's full-browser view back to your repl's cover
+    page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+    teal, blue, blurple, magenta, pink!
+    -->
+    <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+@font-face {
+    font-family: 'NumberFont'; /*a name to be used later*/
+    src: url('../fonts/frankfurter-medium.otf'); /*URL to font*/
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-image: url('../images/numberblocks-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*opacity: 50%;*/
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: 'NumberFont', sans-serif;
+}
+
+#factor-form {
+  margin: 15px 0 15px 0;
+}
+
+#factor-form label {
+  font-family: 'NumberFont', sans-serif;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+#factor-form input {
+  font-family: 'NumberFont', sans-serif;
+  font-size: 36px;
+  width: 250px;
+}
+
+#factor-button {
+  background-color: #BABEE5;
+  border-radius: 5px;
+  font-family: 'NumberFont', sans-serif;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+#results {
+  background-color: rgba(0,0,0,0.10);
+  /* display: flex; */
+  /* justify-content: center; */
+  font-family: 'NumberFont', sans-serif;
+  /* padding: 2px; */
+}
+
+#number-output {
+  text-align: center;
+}
+
+#the-number {
+  background-color: white;
+  border: solid 2px black;
+  border-radius: 5px;
+  font-size: 64px;
+  text-align: center;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+#badges-output {
+  display: flex;
+  justify-content: center;
+}
+
+#badges-output figure {
+  margin: 1em 0 1em 0;
+}
+
+#badges-output figcaption {
+  font-family: 'NumberFont', sans-serif;
+  text-align: center;
+}
+
+.badge {
+  margin: 10px 10px 0px 10px; /* t r b l */
+  width: 75px;
+}
+
+/* FACTOR OUTPUT SECTION */
+
+#factors-output {
+  align-content: center;
+  margin-bottom: 10pt;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#factors-output h2 {
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+#factors-output h3 {
+  margin-top: 2px;
+  text-align: center;
+}
+
+#factor-list {
+  align-self: center;
+  overflow-y: scroll;
+  height: 150px;
+  width: 80%;
+  resize: none;
+  font-size: 14pt;
+  font-family: 'NumberFont', sans-serif;
+}
+
+/* UPDATES SECTION */
+/* #updatescontainer {
+  display: flex;
+} */
+
+#updates-button {
+  margin-top: 10px;
+}
+
+#updates-dialog {
+  border-radius: 5px;
+  padding: 8px;
+}
+
+#updates-dialog::backdrop {
+  background: rgba(0, 0, 0, .5);
+}
+
+#updates-dialog div {
+  display: flex;
+  flex-direction: column;
+
+  width: 500px;
+}
+
+.date {
+  text-decoration: underline;
+}
+
+#updates-dialog p, li {
+  font-family: NumberFont, sans-serif;
+  line-height: 1.5;
+  margin: 0px 16px 16px 16px; // top right bottom left
+}
+
+#close-updates-dialog {
+  align-self: flex-end;
+
+  background: transparent;
+  border: none;
+  color: #626368;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+#close-updates-dialog:hover {
+  color: #000000;
+}
+
+/* TODO: Why do I need this to avoid blue outlining?? */
+/* #close-updates-dialog:focus {
+  outline: none;
+} */
